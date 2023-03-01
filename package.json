@@ -1,0 +1,24 @@
+{
+  "name": "design",
+  "version": "1.0.0",
+  "description": "design of customize book",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node -r dotenv/config index.js",
+    "build-styles": "sass scss/index.scss build/css/index.css",
+    "watch-styles": "sass --watch scss/index.scss build/css/index.css",
+    "build-scripts": "tsc --project tsconfig.json",
+    "watch-scripts": "tsc --watch",
+    "build": "npm run build-scripts && npm run build-styles"
+  },
+  "author": "Akash Patel <akashp.customizebook.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,24 @@
+@mixin keyframes-animation($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin prefix-property($name, $value) {
+    -webkit-#{$name}: $value;
+    #{$name}: $value;
+}
+
+@mixin for_breakpoint($breakpoints...) {
+    $conditions: ();
+    @each $breakpoint in $breakpoints {
+        // If the key exists in the map
+        $conditions: append( $conditions, #{inspect(map-get($media_queries, $breakpoint))}, comma);
+    }
+    @media #{$conditions} {
+        @content;
+    }
+}
