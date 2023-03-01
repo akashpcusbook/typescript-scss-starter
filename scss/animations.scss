@@ -1,0 +1,55 @@
+@include keyframes-animation(zoom-in) {
+    0% {
+        @include prefix-property(transform, scale(0, 0));
+    }
+    100% {
+        @include prefix-property(transform, scale(1, 1));
+    }
+}
+
+@include keyframes-animation(pulse) {
+    0% {
+        //   box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+        @include prefix-property(box-shadow, 0 0 0 0px rgba(0, 0, 0, 0.2));
+    }
+    100% {
+        //   box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+        @include prefix-property(box-shadow, 0 0 0 20px rgba(0, 0, 0, 0));
+    }
+}
+
+@include keyframes-animation(submenu-slide-in) {
+    0% {
+        @include prefix-property(left, -250px);
+    }
+    100% {
+        @include prefix-property(left, 80px);
+    }
+}
+
+@include keyframes-animation(submenu-slide-out) {
+    0% {
+        @include prefix-property(left, 80px);
+    }
+    100% {
+        @include prefix-property(left, -250px);
+    }
+}
+
+@include keyframes-animation(submenu-slide-up) {
+    0% {
+        @include prefix-property(bottom, -250px);
+    }
+    100% {
+        @include prefix-property(bottom, 60px);
+    }
+}
+
+@include keyframes-animation(submenu-slide-down) {
+    0% {
+        @include prefix-property(bottom, 60px);
+    }
+    100% {
+        @include prefix-property(bottom, -250px);
+    }
+}
